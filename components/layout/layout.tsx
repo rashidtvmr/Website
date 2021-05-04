@@ -3,34 +3,41 @@ import Meta from '../_meta/meta'
 import Header from "./header";
 import styled from "styled-components";
 import React from "react";
-import { Alert, AlertTitle } from '@material-ui/lab';
+import {Alert, AlertTitle} from '@material-ui/lab';
 
 type Props = {
-  preview?: boolean
-  children: React.ReactNode
+    preview?: boolean
+    children: React.ReactNode
 }
 
-const MinFullScreenHeight = styled.div`
+const Container = styled.div`
   min-height: 100vh;
+  height: 100%;
+  background-color: blue;
+  
+  display: flex;
+  
 `
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = ({preview, children}: Props) => {
     // todo figure out preview
-  return (
-    <>
-          <Meta />
-        {/*<Alert severity="error">*/}
-        {/*    <AlertTitle>Error</AlertTitle>*/}
-        {/*    This is an error alert — <strong>check it out!</strong>*/}
-        {/*</Alert>*/}
-        {/*<Alert preview={preview} />*/}
-        <MinFullScreenHeight>
-            <Header/>
-            <main>{children}</main>
-            <Footer />
-        </MinFullScreenHeight>
-    </>
-  )
+    return (
+        <>
+
+            {/*<Alert severity="error">*/}
+            {/*    <AlertTitle>Error</AlertTitle>*/}
+            {/*    This is an error alert — <strong>check it out!</strong>*/}
+            {/*</Alert>*/}
+            {/*<Alert preview={preview} />*/}
+            <Container>
+                <div>
+                    <Header/>
+                    <main>{children}</main>
+                    <Footer/>
+                </div>
+            </Container>
+        </>
+    )
 }
 
 export default Layout
