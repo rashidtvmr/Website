@@ -14,10 +14,13 @@ const Container = styled.div`
   min-height: 100vh;
   height: 100%;
   background-color: blue;
+  width: 100%;
+  min-width: 100%;
   
-  display: flex;
+  //display: flex;
   
 `
+
 
 const Layout = ({preview, children}: Props) => {
     // todo figure out preview
