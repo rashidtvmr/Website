@@ -16,9 +16,6 @@ const Container = styled.div`
   background-color: blue;
   width: 100%;
   min-width: 100%;
-  
-  //display: flex;
-  
 `
 
 

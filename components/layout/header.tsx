@@ -12,14 +12,15 @@ const HeaderContainer = styled.div`
   height: 5rem;
 `;
 
+// todo grab nav links from somewhere
 const Header = () => {
     return (
         <HeaderContainer>
             <LogoComponent/>
             <nav>
                 <NavLink href="/" name="Home"/>
-                <NavLink href="/process" name="Process"/>
-                <NavLink href="/about" name="About Us"/>
+                <NavLink href="/our-agile-development-process" name="Our Process"/>
+                <NavLink href="/about-us" name="About Us"/>
             </nav>
             <MenuButton expanded={false}/>
         </HeaderContainer>

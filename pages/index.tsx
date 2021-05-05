@@ -1,22 +1,34 @@
 
-
+import Head from 'next/head';
 import Post from '../types/post'
-import Layout from "../components/layout/layout";
+import {createGlobalStyle} from "styled-components";
+import React from "react";
+
+const GlobalStyle = createGlobalStyle`
+ h1 {
+   font-size: 4rem;
+ }
+`;
 
 type Props = {
   allPosts: Post[]
 }
 
-const Index = ({ allPosts }: Props) => {
+const Home = ({ allPosts }: Props) => {
   return (
-    <div>Home page!!</div>
+    <>
+      <Head>
+        <title>SSR styled-components! Next.js Starter</title>
+      </Head>
+      <GlobalStyle/>
+    </>
   )
 }
-
-export default Index
 
 export const getStaticProps = async () => {
   return {
     props: {props: []},
   }
 }
+
+export default Home
