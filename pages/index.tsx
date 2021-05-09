@@ -1,10 +1,32 @@
 import Head from 'next/head';
 import {createGlobalStyle} from "styled-components";
 import React from "react";
-import {HeroSection} from '../components/page-sections/hero-section';
-import {OurProcessSection} from '../components/page-sections/our-process-section';
-import {StatisticsSection} from '../components/page-sections/statistics-section';
-import {WhyChooseUsSection} from '../components/page-sections/why-choose-us-section';
+import {HeroProps, HeroSection} from '../components/page-sections/hero-section';
+import {OurProcessProps, OurProcessSection} from '../components/page-sections/our-process-section';
+import {StatisticsProps, StatisticsSection} from '../components/page-sections/statistics-section';
+import {WhyChooseUsProps, WhyChooseUsSection} from '../components/page-sections/why-choose-us-section';
+import {TestimonialProps, TestimonialSection} from "../components/page-sections/testimonial-section";
+import {OurServicesProps, OurServicesSection, ServiceCard} from "../components/page-sections/our-services-section";
+import {StatisticsConfig} from "../config/statistics-config";
+import {
+  CUTTING_EDGE_TECHNOLOGY,
+  NATURAL_TRANSPARENCY,
+  REAL_TIME_UPDATES,
+  WORLD_CLASS_DEVELOPERS
+} from "../config/why-choose-us-config";
+import {TESTIMONIAL_1} from "../config/testemonials-config";
+import {
+  IntegrationsAndApiDevelopmentCard, OUR_SERVICES_HEADER,
+  TechnologyMigrationServicesCard,
+  WebAndMobileAppDevCard
+} from "../config/our-services-config";
+import {HERO_BACKGROUND_IMAGE_1, HERO_BODY_TEXT_1, HERO_BUTTON_LABEL_1, HERO_HEADER} from "../config/hero-config";
+import {
+  OUR_PROCESS_ACTION_BUTTON_LABEL,
+  OUR_PROCESS_SECTION_TITLE,
+  STEP_1,
+  STEP_2, STEP_3
+} from "../config/our-processes-config";
 
 const GlobalStyle = createGlobalStyle`
   h1 {
@@ -13,125 +35,80 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 type Props = {
-  heroProps: any,
-  ourProcessProps: any,
-  statisticsProps: any,
-  whyChooseUsProps: any,
-  testimonialProps: any
+  heroProps: HeroProps,
+  ourServicesProps: OurServicesProps,
+  ourProcessProps: OurProcessProps,
+  statisticsProps: StatisticsProps,
+  whyChooseUsProps: WhyChooseUsProps,
+  testimonialProps: TestimonialProps
 }
 
 const Home = ({
                 heroProps,
+                ourServicesProps,
                 ourProcessProps,
                 statisticsProps,
                 whyChooseUsProps,
                 testimonialProps
-}: Props) => {
+              }: Props) => {
   return (
     <>
-      <Head>
-        <title>SSR styled-components! Next.js Starter</title>
-      </Head>
-      <HeroSection {...heroProps}/>
-      <OurProcessSection {...ourProcessProps} />
-      <StatisticsSection {...statisticsProps} />
+      {/*<Head>*/}
+      {/*  <title>Check header inject</title>*/}
+      {/*</Head>*/}
+      <HeroSection {...heroProps} />
+      <OurServicesSection {...ourServicesProps} />
       <WhyChooseUsSection {...whyChooseUsProps} />
+      <StatisticsSection {...statisticsProps} />
+      <OurProcessSection {...ourProcessProps} />
       <TestimonialSection {...testimonialProps} />
       <GlobalStyle/>
-    </TestimonialSection>
+    </>
   )
 }
 
-const WebAndMobileAppDevCard = {
-  title: "Web & Mobile App Development",
-  text: "All of our solutions are mobile-ready and tested on all major devices.",
-  image: "",
-  component: (<div>web and mobile</div>)
-}
-const IntegrationsAndApiDevelopmentCard = {
-  title: "Integrations & API Developent",
-  text: "We link even the most complex systems together and synchronize data accross mobile, desktop, and web. We are Integration and API Experts.",
-  image: "",
-  component: (<div></div>)
-}
-const TechnologyMigrationServicesCard = {
-  title: "Technology Migration Services",
-  text: "Update from legacy systems and proprietary solutions to the latest technology.",
-  image: "",
-  component: (<div>TMSC</div>)
-}
-
-const StatisticsConfig = [
-  {
-    exclamatoryText: "37% Faster",
-    text: "Time to market with agile project management.",
-    image: ""
-  },
-  {
-    exclamatoryText: "58% Reduced",
-    text: "Development cost when using Node.js.",
-    image: ""
-  },
-  {
-    exclamatoryText: "$2.6 Billion Lost",
-    text: "Each year due to slow loading websites.",
-    image: ""
-  },
-];
-
-
-const Testimonials: Testemonial[] = [
-
-]
 
 export const getStaticProps = async () => {
+  const staticProps: Props = {
+    heroProps: {
+      header: HERO_HEADER,
+      bodyText: HERO_BODY_TEXT_1,
+      buttonLabel: HERO_BUTTON_LABEL_1,
+      backgroundImage: HERO_BACKGROUND_IMAGE_1,
+    },
+    ourServicesProps: {
+      title: OUR_SERVICES_HEADER,
+      cards: [
+        WebAndMobileAppDevCard,
+        IntegrationsAndApiDevelopmentCard,
+        TechnologyMigrationServicesCard
+      ],
+    },
+    whyChooseUsProps: {
+      reasons: [
+        NATURAL_TRANSPARENCY,
+        WORLD_CLASS_DEVELOPERS,
+        REAL_TIME_UPDATES,
+        CUTTING_EDGE_TECHNOLOGY,
+      ]
+    },
+    statisticsProps: {
+      statistics: StatisticsConfig
+    },
+    ourProcessProps: {
+      actionButtonLabel: OUR_PROCESS_ACTION_BUTTON_LABEL,
+      steps: [STEP_1, STEP_2, STEP_3]
+    },
+    testimonialProps: {
+      testimonials: [
+        TESTIMONIAL_1
+      ]
+    }
+  }
   return {
     props: {
-      props: {
-        heroProps: {
-          header: "EXPANSE SERVICES",
-          bodyText: "With our game-changing development process we create best-in -class mobile & web apps to support your success, growth, and your users’ experience in record time.",
-          buttonLabel: "Request Quote",
-          // contactUs: "Contact Us",
-        },
-        ourServicesProps: {
-          title: "Our Services",
-          cards: [
-            WebAndMobileAppDevCard,
-            IntegrationsAndApiDevelopmentCard,
-            TechnologyMigrationServicesCard
-          ],
-        },
-        whyChooseUsProps: {
-          logoTextPairs: [
-            {
-              text: "Natural Transparency",
-              icon: ""
-            },
-            {
-              text: "World Class Developers",
-              icon: ""
-            },
-            {
-              text: "Real-Time Updates",
-              icon: ""
-            },
-            {
-              text: "Cutting Edge Technology",
-              icon: ""
-            }
-          ]
-        },
-        statisticsProps: {
-          statistics: StatisticsConfig
-        },
-        ourProcessProps: {},
-        testimonialProps: {
-          testemonials: []
-        }
-      }
+      props: staticProps
     },
-
   }
 }
 
