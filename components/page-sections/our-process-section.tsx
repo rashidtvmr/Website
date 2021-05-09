@@ -16,6 +16,7 @@ export interface Step {
 }
 
 export interface OurProcessProps {
+  title: string;
   steps: Step[];
   actionButtonLabel: string;
 }

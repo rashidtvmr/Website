@@ -96,6 +96,7 @@ export const getStaticProps = async () => {
       statistics: StatisticsConfig
     },
     ourProcessProps: {
+      title: OUR_PROCESS_SECTION_TITLE,
       actionButtonLabel: OUR_PROCESS_ACTION_BUTTON_LABEL,
       steps: [STEP_1, STEP_2, STEP_3]
     },
