@@ -1,6 +1,6 @@
 import NavLink from "../navigation/nav-link.component";
 import React from "react";
-import styled from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
 import {LogoComponent} from "../company/logo.component";
 import {MenuButton} from "../navigation/menu-button.component";
 
@@ -12,19 +12,43 @@ const HeaderContainer = styled.div`
   height: 5rem;
 `;
 
+const StyledNavLink = styled(NavLink)`
+  padding: 1rem;
+  color: teal;
+`
+
+const NavContainer = styled.nav`
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem;
+
+  ${StyledNavLink} {
+    color: orange;
+  }
+
+`
+
+const GlobalStyle = createGlobalStyle`
+  a {
+    margin: 5px;
+  }
+`;
+
 // todo grab nav links from somewhere
 const Header = () => {
-    return (
-        <HeaderContainer>
-            <LogoComponent/>
-            <nav>
-                <NavLink href="/" name="Home"/>
-                <NavLink href="/our-agile-development-process" name="Our Process"/>
-                <NavLink href="/about-us" name="About Us"/>
-            </nav>
-            <MenuButton expanded={false}/>
-        </HeaderContainer>
-    )
+  return (
+    <HeaderContainer>
+      <GlobalStyle/>
+      <LogoComponent/>
+      <NavContainer>
+        <StyledNavLink href="/" name="Home"/>
+        <StyledNavLink href="/our-agile-development-process" name="Our Process"/>
+        <StyledNavLink href="/about-us" name="About Us"/>
+      </NavContainer>
+      {/*<MenuButton expanded={false}/>*/}
+    </HeaderContainer>
+  )
 }
 
 export default Header
