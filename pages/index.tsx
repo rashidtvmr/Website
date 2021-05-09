@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import {createGlobalStyle} from "styled-components";
 import React from "react";
-import {HeroSection} from '../components/containers/page-sections/hero-section';
-import {OurProcessSection} from '../components/containers/page-sections/our-process-section';
-import {StatisticsSection} from '../components/containers/page-sections/statistics-section';
-import {WhyChooseUsSection} from '../components/containers/page-sections/why-choose-us-section';
+import {HeroSection} from '../components/page-sections/hero-section';
+import {OurProcessSection} from '../components/page-sections/our-process-section';
+import {StatisticsSection} from '../components/page-sections/statistics-section';
+import {WhyChooseUsSection} from '../components/page-sections/why-choose-us-section';
 
 const GlobalStyle = createGlobalStyle`
   h1 {
@@ -16,10 +16,17 @@ type Props = {
   heroProps: any,
   ourProcessProps: any,
   statisticsProps: any,
-  whyChooseUsProps: any
+  whyChooseUsProps: any,
+  testimonialProps: any
 }
 
-const Home = ({heroProps, ourProcessProps, statisticsProps, whyChooseUsProps}: Props) => {
+const Home = ({
+                heroProps,
+                ourProcessProps,
+                statisticsProps,
+                whyChooseUsProps,
+                testimonialProps
+}: Props) => {
   return (
     <>
       <Head>
@@ -29,8 +36,9 @@ const Home = ({heroProps, ourProcessProps, statisticsProps, whyChooseUsProps}: P
       <OurProcessSection {...ourProcessProps} />
       <StatisticsSection {...statisticsProps} />
       <WhyChooseUsSection {...whyChooseUsProps} />
+      <TestimonialSection {...testimonialProps} />
       <GlobalStyle/>
-    </>
+    </TestimonialSection>
   )
 }
 
@@ -53,18 +61,23 @@ const TechnologyMigrationServicesCard = {
   component: (<div>TMSC</div>)
 }
 
-const SlowLoadingSiteStatistics = () => {
-  const text = "Each year due to slow loading websites.";
-  return (<div>$2.6 Billion Lost</div>)
-};
-const TimeToMarketStatistics = () => {
-  const text = "Time to market with agile project management.";
-  return (<div>$2.6 Billion Lost</div>)
-};
-const ReducedDevelopmentCostStatistic = () => {
-  const text = "Development cost when using Node.js";
-  return (<div>{text}</div>)
-};
+const StatisticsConfig = [
+  {
+    exclamatoryText: "37% Faster",
+    text: "Time to market with agile project management.",
+    image: ""
+  },
+  {
+    exclamatoryText: "58% Reduced",
+    text: "Development cost when using Node.js.",
+    image: ""
+  },
+  {
+    exclamatoryText: "$2.6 Billion Lost",
+    text: "Each year due to slow loading websites.",
+    image: ""
+  },
+];
 
 
 const Testimonials: Testemonial[] = [
@@ -110,11 +123,7 @@ export const getStaticProps = async () => {
           ]
         },
         statisticsProps: {
-          statistics: [
-            SlowLoadingSiteStatistics,
-            TimeToMarketStatistics,
-            ReducedDevelopmentCostStatistic,
-          ]
+          statistics: StatisticsConfig
         },
         ourProcessProps: {},
         testimonialProps: {
