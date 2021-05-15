@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {createGlobalStyle} from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 import React from "react";
 import {HeroProps, HeroSection} from '../components/page-sections/hero-section';
 import {OurProcessProps, OurProcessSection} from '../components/page-sections/our-process-section';
@@ -51,17 +51,40 @@ const Home = ({
                 whyChooseUsProps,
                 testimonialProps
               }: Props) => {
+
+  const SectionContainerStyled = styled.section`
+    height: ${(props: any) => props?.height ? props?.height : "500px"};
+    min-height: ${(props: any) => props?.height ? props?.height : "500px"};
+    background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT}
+  `;
+
+  const BACKGROUND_DEFAULT = "#222A36"
+  const HEADER_DEFAULT = "#1C232E";
+
   return (
     <>
       {/*<Head>*/}
       {/*  <title>Check header inject</title>*/}
       {/*</Head>*/}
-      <HeroSection {...heroProps} />
-      <OurServicesSection {...ourServicesProps} />
-      <WhyChooseUsSection {...whyChooseUsProps} />
-      <StatisticsSection {...statisticsProps} />
-      <OurProcessSection {...ourProcessProps} />
-      <TestimonialSection {...testimonialProps} />
+      <SectionContainerStyled>
+        <HeroSection {...heroProps} />
+      </SectionContainerStyled>
+      <SectionContainerStyled>
+        <OurServicesSection {...ourServicesProps} />
+      </SectionContainerStyled>
+      <SectionContainerStyled>
+        <WhyChooseUsSection {...whyChooseUsProps} />
+      </SectionContainerStyled>
+      <SectionContainerStyled>
+        <StatisticsSection {...statisticsProps} />
+      </SectionContainerStyled>
+      <SectionContainerStyled>
+        <OurProcessSection {...ourProcessProps} />
+      </SectionContainerStyled>
+      <SectionContainerStyled>
+        <TestimonialSection {...testimonialProps} />
+      </SectionContainerStyled>
+
       <GlobalStyle/>
     </>
   )
@@ -98,6 +121,7 @@ export const getStaticProps = async () => {
     ourProcessProps: {
       title: OUR_PROCESS_SECTION_TITLE,
       actionButtonLabel: OUR_PROCESS_ACTION_BUTTON_LABEL,
+      // steps: [STEP_1, STEP_2, STEP_3]
       steps: [STEP_1, STEP_2, STEP_3]
     },
     testimonialProps: {

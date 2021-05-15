@@ -6,7 +6,7 @@ export type HeroProps = {
 }
 
 export const HeroSection = ({
-                              text,
+                              bodyText,
                               backgroundImage
                             }: HeroProps) => {
 
@@ -14,7 +14,7 @@ export const HeroSection = ({
     <div>
       <div>{backgroundImage}</div>
       <div>
-        <h1>{text}</h1>
+        <h1>{bodyText}</h1>
       </div>
     </div>
   )

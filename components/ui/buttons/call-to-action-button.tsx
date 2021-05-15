@@ -1,3 +1,6 @@
-export const CallToActionButton = () => {
-    return <button>Call To Action!</button>
+type Props = {
+    text: string;
+}
+export const CallToActionButton = ({text}: Props) => {
+    return <button>{text || "Call To Action!"}</button>
 }

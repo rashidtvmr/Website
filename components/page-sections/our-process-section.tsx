@@ -1,3 +1,5 @@
+import {CallToActionButton} from "../ui/buttons/call-to-action-button";
+
 export const STEP_1_TITLE = "Consultation";
 export const STEP_2_TITLE = "Agile Application Development";
 export const STEP_3_TITLE = "Deployment and Support";
@@ -10,7 +12,6 @@ export const ACTION_BUTTON_LABEL = "Explore";
 export const OUR_PROCESS_SECTION_TITLE = "Our Process";
 
 export interface Step {
-  title: string;
   label: string;
   image: string; // Or component?
 }
@@ -22,16 +23,19 @@ export interface OurProcessProps {
 }
 
 export const OurProcessSection = ({
+                                    title,
                                     steps,
                                     actionButtonLabel
                                   }: OurProcessProps) => {
+  console.log({steps});
 
   return (
     <div>
-      <div>image</div>
+      <h1>{title}</h1>
       <div>
-        <h1>{"Our Process"}</h1>
+        <h1>{title}</h1>
       </div>
+      <CallToActionButton text={actionButtonLabel} />
     </div>
   )
 }
