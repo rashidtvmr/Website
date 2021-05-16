@@ -1,6 +1,8 @@
 import {HERO_BACKGROUND_IMAGE} from "../../config/hero-config";
 import styled from "styled-components";
 import {BodyText} from "../ui/text/body-text";
+import {BaseFlexContainer} from "../_utility/utility";
+import {FlexContainer} from "../ui/containers/containers";
 
 export type HeroProps = {
   header: string;
@@ -31,12 +33,20 @@ export const HeroSection = ({
   }
 
   return (
-    <>
-      <HeroImage />
-      <BodyTextContainer>
-        <BodyText>{bodyText}</BodyText>
-      </BodyTextContainer>
-    </>
+    <BaseFlexContainer style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <FlexContainer style={{display: "flex", justifyContent: "center", alignItems: "stretch", flexDirection: "row"}}>
+        <HeroImage />
+
+        <BodyTextContainer style={{
+          // display: "flex",
+          // justifyContent: "center",
+          color: "white",
+          width: "500px"
+        }}>
+          <BodyText>{bodyText}</BodyText>
+        </BodyTextContainer>
+      </FlexContainer>
+    </BaseFlexContainer>
   )
 }
 

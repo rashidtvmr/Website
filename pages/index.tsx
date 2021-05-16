@@ -31,7 +31,8 @@ type Props = {
 const SectionContainerStyled = styled.section`
   height: ${(props: any) => props?.height ? props?.height : "500px"};
   min-height: ${(props: any) => props?.height ? props?.height : "500px"};
-  background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT}
+  background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT};
+  display: flex;
 `;
 
 const Home = ({
