@@ -4,12 +4,24 @@ import {LogoComponent} from "../company/logo.component";
 import {NavLink, StyledNavLink} from "../ui/links/links";
 import {MenuButton} from "../navigation/menu-button.component";
 import {useRouter} from "next/router";
+import {HEADER_DEFAULT} from "../../config/header-config";
+
+const HeaderBackground = styled.div`
+  background-color: ${HEADER_DEFAULT};
+  width: 100%;
+  height: 5rem;
+  z-index: -1;
+  position: absolute;
+  opacity: 0.8;
+`
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #1C232E;
-  color: white;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  top: 0;
   height: 5rem;
 `;
 
@@ -54,6 +66,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <GlobalStyle/>
+      <HeaderBackground/>
       <LogoContainer>
         <LogoComponent white/>
       </LogoContainer>

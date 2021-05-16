@@ -27,14 +27,9 @@ export const OurProcessSection = ({
                                     steps,
                                     actionButtonLabel
                                   }: OurProcessProps) => {
-  console.log({steps});
-
   return (
     <div>
       <h1>{title}</h1>
-      <div>
-        <h1>{title}</h1>
-      </div>
       <CallToActionButton text={actionButtonLabel} />
     </div>
   )

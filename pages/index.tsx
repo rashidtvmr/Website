@@ -7,26 +7,9 @@ import {StatisticsProps, StatisticsSection} from '../components/page-sections/st
 import {WhyChooseUsProps, WhyChooseUsSection} from '../components/page-sections/why-choose-us-section';
 import {TestimonialProps, TestimonialSection} from "../components/page-sections/testimonial-section";
 import {OurServicesProps, OurServicesSection, ServiceCard} from "../components/page-sections/our-services-section";
-import {StatisticsConfig} from "../config/statistics-config";
-import {
-  CUTTING_EDGE_TECHNOLOGY,
-  NATURAL_TRANSPARENCY,
-  REAL_TIME_UPDATES,
-  WORLD_CLASS_DEVELOPERS
-} from "../config/why-choose-us-config";
-import {TESTIMONIAL_1} from "../config/testemonials-config";
-import {
-  IntegrationsAndApiDevelopmentCard, OUR_SERVICES_HEADER,
-  TechnologyMigrationServicesCard,
-  WebAndMobileAppDevCard
-} from "../config/our-services-config";
-import {HERO_BACKGROUND_IMAGE_1, HERO_BODY_TEXT_1, HERO_BUTTON_LABEL_1, HERO_HEADER} from "../config/hero-config";
-import {
-  OUR_PROCESS_ACTION_BUTTON_LABEL,
-  OUR_PROCESS_SECTION_TITLE,
-  STEP_1,
-  STEP_2, STEP_3
-} from "../config/our-processes-config";
+import {BACKGROUND_DEFAULT} from "../config/app-config";
+import {HomeConfig} from "../config/home-config";
+import {BaseFlexContainer} from "../components/_utility/utility";
 
 const GlobalStyle = createGlobalStyle`
   h1 {
@@ -43,6 +26,14 @@ type Props = {
   testimonialProps: TestimonialProps
 }
 
+
+
+const SectionContainerStyled = styled.section`
+  height: ${(props: any) => props?.height ? props?.height : "500px"};
+  min-height: ${(props: any) => props?.height ? props?.height : "500px"};
+  background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT}
+`;
+
 const Home = ({
                 heroProps,
                 ourServicesProps,
@@ -51,89 +42,40 @@ const Home = ({
                 whyChooseUsProps,
                 testimonialProps
               }: Props) => {
-
-  const SectionContainerStyled = styled.section`
-    height: ${(props: any) => props?.height ? props?.height : "500px"};
-    min-height: ${(props: any) => props?.height ? props?.height : "500px"};
-    background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT}
-  `;
-
-  const BACKGROUND_DEFAULT = "#222A36"
-  const HEADER_DEFAULT = "#1C232E";
+  console.log({heroProps})
 
   return (
-    <>
+    <BaseFlexContainer>
       {/*<Head>*/}
       {/*  <title>Check header inject</title>*/}
       {/*</Head>*/}
       <SectionContainerStyled>
         <HeroSection {...heroProps} />
       </SectionContainerStyled>
-      <SectionContainerStyled>
+      <SectionContainerStyled backgroundColor="red">
         <OurServicesSection {...ourServicesProps} />
       </SectionContainerStyled>
-      <SectionContainerStyled>
+      <SectionContainerStyled backgroundColor="orange">
         <WhyChooseUsSection {...whyChooseUsProps} />
       </SectionContainerStyled>
-      <SectionContainerStyled>
+      <SectionContainerStyled backgroundColor="blue">
         <StatisticsSection {...statisticsProps} />
       </SectionContainerStyled>
-      <SectionContainerStyled>
+      <SectionContainerStyled backgroundColor="green">
         <OurProcessSection {...ourProcessProps} />
       </SectionContainerStyled>
-      <SectionContainerStyled>
+      <SectionContainerStyled backgroundColor="teal">
         <TestimonialSection {...testimonialProps} />
       </SectionContainerStyled>
-
       <GlobalStyle/>
-    </>
+    </BaseFlexContainer>
   )
 }
 
 
 export const getStaticProps = async () => {
-  const staticProps: Props = {
-    heroProps: {
-      header: HERO_HEADER,
-      bodyText: HERO_BODY_TEXT_1,
-      buttonLabel: HERO_BUTTON_LABEL_1,
-      backgroundImage: HERO_BACKGROUND_IMAGE_1,
-    },
-    ourServicesProps: {
-      title: OUR_SERVICES_HEADER,
-      cards: [
-        WebAndMobileAppDevCard,
-        IntegrationsAndApiDevelopmentCard,
-        TechnologyMigrationServicesCard
-      ],
-    },
-    whyChooseUsProps: {
-      reasons: [
-        NATURAL_TRANSPARENCY,
-        WORLD_CLASS_DEVELOPERS,
-        REAL_TIME_UPDATES,
-        CUTTING_EDGE_TECHNOLOGY,
-      ]
-    },
-    statisticsProps: {
-      statistics: StatisticsConfig
-    },
-    ourProcessProps: {
-      title: OUR_PROCESS_SECTION_TITLE,
-      actionButtonLabel: OUR_PROCESS_ACTION_BUTTON_LABEL,
-      // steps: [STEP_1, STEP_2, STEP_3]
-      steps: [STEP_1, STEP_2, STEP_3]
-    },
-    testimonialProps: {
-      testimonials: [
-        TESTIMONIAL_1
-      ]
-    }
-  }
   return {
-    props: {
-      props: staticProps
-    },
+    props: HomeConfig,
   }
 }
 

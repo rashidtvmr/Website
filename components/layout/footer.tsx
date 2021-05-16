@@ -16,7 +16,16 @@ const Container = styled.div`
   background: #f5f5f5;
 `
 const GlobalStyle = createGlobalStyle`
-  ${Container}
+  footer {
+    background: #f5f5f5;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    min-height: 3rem;
+  }
 `;
 
 
@@ -26,8 +35,7 @@ type Props = {
 const Footer = ({}) => {
   return (
     <footer>
-      <Container>
-        <LogoComponent/>
+        {/*<LogoComponent/>*/}
         <FacebookIcon/>
         <GithubIcon/>
         <PhoneNumberIcon/>
@@ -38,7 +46,6 @@ const Footer = ({}) => {
              className="mx-3 font-bold hover:underline"
           >View on GitHub</a>
         </div>
-      </Container>
       <GlobalStyle/>
     </footer>
   )

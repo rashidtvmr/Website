@@ -1,3 +1,5 @@
-export const BodyText = () => {
-    return <div>body text</div>
-}
+import styled from "styled-components";
+
+export const BodyText = styled.p`
+    font-size: 1rem;
+`;
