@@ -11,8 +11,10 @@ export type HeroProps = {
   backgroundImage?: string; // or ?
 }
 
-const BodyTextContainer = styled.div`
-  
+const HeaderText = styled.h3`
+  color: white;
+  font-size: 2rem;
+  text-align: center;
 `;
 
 export const HeroSection = ({
@@ -34,17 +36,25 @@ export const HeroSection = ({
 
   return (
     <BaseFlexContainer style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-      <FlexContainer style={{display: "flex", justifyContent: "center", alignItems: "stretch", flexDirection: "row"}}>
-        <HeroImage />
-
-        <BodyTextContainer style={{
-          // display: "flex",
-          // justifyContent: "center",
+      <HeroImage/>
+      <FlexContainer
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column"
+        }}>
+        <div>
+          <HeaderText>EXPANSE SERVICES</HeaderText>
+        </div>
+        <div style={{
           color: "white",
-          width: "500px"
+          width: "500px",
+          position: "relative",
+          zIndex: 1,
+          textAlign: "center"
         }}>
           <BodyText>{bodyText}</BodyText>
-        </BodyTextContainer>
+        </div>
       </FlexContainer>
     </BaseFlexContainer>
   )
