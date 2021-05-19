@@ -30,8 +30,14 @@ export const HeroSection = ({
     return <img
       alt="technology background"
       src={backgroundImage}
-      style={{position: "absolute", top: 0, zIndex: 0}}
+      style={{
+        position: "absolute",
+        top: "-24rem",
+        zIndex: 0
+      }}
     />
+
+
   }
 
   return (
@@ -43,7 +49,10 @@ export const HeroSection = ({
           justifyContent: "center",
           flexDirection: "column"
         }}>
-        <div>
+        <div style={{
+          position: "relative", // todo - extract this to a component for zindexing
+          zIndex: 1,
+        }}>
           <HeaderText>EXPANSE SERVICES</HeaderText>
         </div>
         <div style={{
