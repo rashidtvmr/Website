@@ -15,9 +15,12 @@ export const ContentContainer = styled.div`
 `
 export const FlexContainer = styled.div`
   display: flex;
+  flex-direction: ${props => props?.flexDirection ? "row" : "column"};
 `
 
 export const PageContainer = ({ children }: Props) => {
-  return <ContentContainer>{children}</ContentContainer>
+  return <ContentContainer>
+    {children}
+  </ContentContainer>
 }
 
