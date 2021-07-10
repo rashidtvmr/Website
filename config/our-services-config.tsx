@@ -1,4 +1,4 @@
-import {ServiceCard} from "../components/page-sections/our-services-section";
+import {ServiceCard} from "../components/ui/sections/home/our-services-section";
 import React from "react";
 
 export const WebAndMobileAppDevCard: ServiceCard = {

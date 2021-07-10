@@ -1,14 +1,13 @@
 import React, {Component} from "react";
-import {FlexContainer} from "../ui/containers/containers";
 import styled from "styled-components";
 import {
   IntegrationsAndApiDevelopmentCard,
   TechnologyMigrationServicesCard,
   WebAndMobileAppDevCard
-} from "../../config/our-services-config";
-import {GreenWatercolorBackgroundGraphic} from "../graphics/images/green-watercolor-background.graphic";
-import {ShapeGraphic} from "../ui/containers/shape.graphic";
-import {OurServicesCard} from "../ui/cards/our-services-card.component";
+} from "../../../../config/our-services-config";
+import {ShapeComponent} from "../../decor/shape.component";
+import {OurServicesCard} from "../../cards/our-services-card.component";
+import {GreenWatercolorBackgroundGraphic} from "../../decor/green-watercolor-background.component";
 
 export type OurServicesProps = {
   title: string;
@@ -37,19 +36,19 @@ const CirclesRightContainer = styled.div``
 export const OurServicesSection = (props: OurServicesProps) => {
   return (
     <>
-      <FlexContainer flexDirection="row">
+      <div style={{flexDirection: "row", display: "flex"}}>
         <Header>Our <b>Services</b></Header>
         <CardContainer>
           <OurServicesCard type={WebAndMobileAppDevCard} />
           <OurServicesCard type={IntegrationsAndApiDevelopmentCard} />
           <OurServicesCard type={TechnologyMigrationServicesCard} />
         </CardContainer>
-      </FlexContainer>
+      </div>
       <CirclesLeftContainer>
-        <ShapeGraphic type="circle1"/>
+        <ShapeComponent type="circle1"/>
       </CirclesLeftContainer>
       <CirclesRightContainer>
-        <ShapeGraphic type="circle1" />
+        <ShapeComponent type="circle1" />
       </CirclesRightContainer>
       <GreenWatercolorBackgroundGraphic/>
     </>

@@ -1,4 +1,4 @@
-import {Step} from "../components/page-sections/our-process-section";
+import {Step} from "../components/ui/sections/home/our-process-section";
 
 export const STEP_1_LABEL = "Consultation";
 export const STEP_2_LABEL = "Agile Application Development";

@@ -7,7 +7,12 @@ export type WhyChooseUsProps = {
     reasons: Reason[]
 }
 
+const WhyChooseUsLabel = () => {
+    return (
+        <div>WhyChooseUsLabel</div>
+    )
+}
 
 export const WhyChooseUsSection = ({reasons}: WhyChooseUsProps) => {
-    return <div>Why Choose Us</div>
+    return <WhyChooseUsLabel></WhyChooseUsLabel>
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import styled, {createGlobalStyle} from 'styled-components'
-import {LogoComponent} from "../company/logo.component";
-import {NavLink, StyledNavLink} from "../ui/links/links";
-import {MenuButton} from "../navigation/menu-button.component";
+import {LogoComponent} from "../../company/logo.component";
+import {NavLink, StyledNavLink} from "../links/links";
+import {MenuButton} from "../../navigation/menu-button.component";
 import {useRouter} from "next/router";
-import {HEADER_DEFAULT} from "../../config/header-config";
+import {HEADER_DEFAULT} from "../../../config/header-config";
 
 const HeaderBackground = styled.div`
   background-color: ${HEADER_DEFAULT};
@@ -72,8 +72,8 @@ const Header = () => {
       </LogoContainer>
       <NavContainer>
         <NavLink href="/" name="Home" currentPage={isCurrentPath("/")}/>
-        <NavLink href="/our-agile-development-process" name="Our Process"
-                 currentPage={isCurrentPath("/our-agile-development-process")}/>
+        <NavLink href="/our-process" name="Our Process"
+                 currentPage={isCurrentPath("/our-process")}/>
         <NavLink href="/about-us" name="About Us" currentPage={isCurrentPath("/about-us")}/>
       </NavContainer>
       {/*<MenuButton expanded={false}/>*/}

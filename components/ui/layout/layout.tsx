@@ -2,8 +2,8 @@ import Footer from './footer'
 import Header from "./header";
 import styled from "styled-components";
 import React from "react";
-import {APP_BACKGROUND_COLOR} from "../../config/app-config";
-import {BaseFlexContainer} from "../_utility/utility";
+import {APP_BACKGROUND_COLOR} from "../../../config/app-config";
+import {BaseFlexContainer} from "../../_utility/utility";
 
 type Props = {
   preview?: boolean

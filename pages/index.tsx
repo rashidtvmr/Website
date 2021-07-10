@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import styled, {createGlobalStyle} from "styled-components";
 import React from "react";
-import {HeroProps, HeroSection} from '../components/page-sections/hero-section';
-import {OurProcessProps, OurProcessSection} from '../components/page-sections/our-process-section';
-import {StatisticsProps, StatisticsSection} from '../components/page-sections/statistics-section';
-import {WhyChooseUsProps, WhyChooseUsSection} from '../components/page-sections/why-choose-us-section';
-import {TestimonialProps, TestimonialSection} from "../components/page-sections/testimonial-section";
-import {OurServicesProps, OurServicesSection, ServiceCard} from "../components/page-sections/our-services-section";
+import {HeroProps, HeroSection} from '../components/ui/sections/home/hero-section';
+import {OurProcessProps, OurProcessSection} from '../components/ui/sections/home/our-process-section';
+import {StatisticsProps, StatisticsSection} from '../components/ui/sections/home/statistics-section';
+import {WhyChooseUsProps, WhyChooseUsSection} from '../components/ui/sections/home/why-choose-us-section';
+import {TestimonialProps, TestimonialSection} from "../components/ui/sections/home/testimonial-section";
+import {OurServicesProps, OurServicesSection} from "../components/ui/sections/home/our-services-section";
 import {BACKGROUND_DEFAULT} from "../config/app-config";
 import {HomeConfig} from "../config/home-config";
 import {BaseFlexContainer} from "../components/_utility/utility";
@@ -27,15 +27,18 @@ type Props = {
 }
 
 
-
-const SectionContainerStyled = styled.section`
-  height: ${(props: any) => props?.height ? props?.height : "500px"};
-  min-height: ${(props: any) => props?.height ? props?.height : "500px"};
-  background-color: ${(props: any) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT};
+type SectionContainerProps = {
+    backgroundColor: string;
+    height: string;
+}
+const SectionContainerStyled = styled.section<SectionContainerProps | any>`
+  height: ${(props) => props?.height ? props?.height : "500px"};
+  min-height: ${(props) => props?.height ? props?.height : "500px"};
+  background-color: ${(props) => props?.backgroundColor ? props?.backgroundColor : BACKGROUND_DEFAULT};
   display: flex;
 `;
 
-const Home = ({
+export const Index = ({
                 heroProps,
                 ourServicesProps,
                 ourProcessProps,
@@ -80,4 +83,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default Home
+export default Index

@@ -1,10 +1,10 @@
-import {EXAMPLE_PATH} from '../../lib/constants'
+import {EXAMPLE_PATH} from '../../../lib/constants'
 import styled, {createGlobalStyle} from "styled-components";
-import {LogoComponent} from "../company/logo.component";
-import {GithubIcon} from "../graphics/icons/github-icon.component";
-import {FacebookIcon} from "../graphics/icons/facebook-icon.component";
-import {PhoneNumberIcon} from "../graphics/icons/phone-number-icon.component";
-import {CompanyPhoneNumber} from "../company/company-phone-number.component";
+import {LogoComponent} from "../../company/logo.component";
+import {GithubIcon} from "../icons/github-icon.component";
+import {FacebookIcon} from "../icons/facebook-icon.component";
+import {PhoneNumberIcon} from "../icons/phone-number-icon.component";
+import {CompanyPhoneNumber} from "../../company/company-phone-number.component";
 import React from "react";
 
 const Container = styled.div`

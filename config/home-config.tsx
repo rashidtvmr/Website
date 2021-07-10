@@ -1,9 +1,9 @@
-import {HeroProps} from "../components/page-sections/hero-section";
-import {OurServicesProps} from "../components/page-sections/our-services-section";
-import {OurProcessProps} from "../components/page-sections/our-process-section";
-import {StatisticsProps} from "../components/page-sections/statistics-section";
-import {WhyChooseUsProps} from "../components/page-sections/why-choose-us-section";
-import {TestimonialProps} from "../components/page-sections/testimonial-section";
+import {HeroProps} from "../components/ui/sections/home/hero-section";
+import {OurServicesProps} from "../components/ui/sections/home/our-services-section";
+import {OurProcessProps} from "../components/ui/sections/home/our-process-section";
+import {StatisticsProps} from "../components/ui/sections/home/statistics-section";
+import {WhyChooseUsProps} from "../components/ui/sections/home/why-choose-us-section";
+import {TestimonialProps} from "../components/ui/sections/home/testimonial-section";
 import {HERO_BACKGROUND_IMAGE, HERO_BODY_TEXT_1, HERO_BUTTON_LABEL_1, HERO_HEADER} from "./hero-config";
 import {
   IntegrationsAndApiDevelopmentCard,

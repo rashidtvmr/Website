@@ -1,5 +1,5 @@
 import React from "react";
 
-export const WebAndMobileAppDevelopmentGraphic = () => {
+export const WebAndMobileAppDevelopmentComponent = () => {
     return <div>Web and mobile app development graphic</div>
 }

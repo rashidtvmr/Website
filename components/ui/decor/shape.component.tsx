@@ -2,6 +2,6 @@
 type Props = {
   type?: any
 }
-export const ShapeGraphic = ({type}: Props) => {
+export const ShapeComponent = ({type}: Props) => {
   return <div>Shape!</div>;
 }
