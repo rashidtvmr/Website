@@ -1,4 +1,4 @@
 export const ConsultationContainer = () => {
-    return <div>Consultation - graphic</div>
+    return <div>Consultation</div>
 }
 
