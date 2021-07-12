@@ -4,10 +4,10 @@ import {
   IntegrationsAndApiDevelopmentCard,
   TechnologyMigrationServicesCard,
   WebAndMobileAppDevCard
-} from "../../../../config/our-services-config";
-import {ShapeComponent} from "../../decor/shape.component";
-import {OurServicesCard} from "../../cards/our-services-card.component";
-import {GreenWatercolorBackgroundGraphic} from "../../decor/green-watercolor-background.component";
+} from "../../../../../config/home/our-services-config";
+import {ShapeComponent} from "../../../decor/shape.component";
+import {OurServicesCard} from "../../../cards/our-services-card.component";
+import {GreenWatercolorBackgroundGraphic} from "../../../decor/green-watercolor-background.component";
 
 export type OurServicesProps = {
   title: string;

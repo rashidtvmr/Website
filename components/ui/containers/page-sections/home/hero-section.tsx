@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {BodyText} from "../../text/body-text";
-import {BaseFlexContainer} from "../../../_utility/utility";
+import {BodyText} from "../../../text/body-text";
+import {BaseFlexContainer} from "../../../../_utility/utility";
 
 export type HeroProps = {
     header: string;

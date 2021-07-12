@@ -1,4 +1,4 @@
-import {CallToActionButton} from "../../buttons/call-to-action-button";
+import {CallToActionButton} from "../../../buttons/call-to-action-button";
 
 export const STEP_1_TITLE = "Consultation";
 export const STEP_2_TITLE = "Agile Application Development";

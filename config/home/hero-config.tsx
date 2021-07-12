@@ -1,5 +1,5 @@
-import HeroImageTransparent from "../public/assets/background/HeroBackgroundVisible.svg"
-import HeroImageVisible from "../public/assets/background/HeroBGTransparent.svg"
+import HeroImageTransparent from "../../public/assets/background/HeroBackgroundVisible.svg"
+import HeroImageVisible from "../../public/assets/background/HeroBGTransparent.svg"
 
 
 export const HERO_HEADER = "EXPANSE SERVICES";

@@ -1,4 +1,4 @@
-import {ServiceCard} from "../sections/home/our-services-section";
+import {ServiceCard} from "../containers/page-sections/home/our-services-section";
 
 type Props = {
   type: ServiceCard

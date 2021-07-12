@@ -1,4 +1,4 @@
-import {Testimonial} from "../../../../types/testimonial.interface";
+import {Testimonial} from "../../../../../types/testimonial.interface";
 
 export type TestimonialProps = {
     testimonials: Testimonial[]

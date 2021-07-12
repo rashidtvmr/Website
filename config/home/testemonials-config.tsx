@@ -1,4 +1,4 @@
-import {Testimonial} from "../types/testimonial.interface";
+import {Testimonial} from "../../types/testimonial.interface";
 
 export const TESTIMONIAL_1: Testimonial = {
   positionTitle: "CEO",

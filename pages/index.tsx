@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import styled, {createGlobalStyle} from "styled-components";
 import React from "react";
-import {HeroProps, HeroSection} from '../components/ui/sections/home/hero-section';
-import {OurProcessProps, OurProcessSection} from '../components/ui/sections/home/our-process-section';
-import {StatisticsProps, StatisticsSection} from '../components/ui/sections/home/statistics-section';
-import {WhyChooseUsProps, WhyChooseUsSection} from '../components/ui/sections/home/why-choose-us-section';
-import {TestimonialProps, TestimonialSection} from "../components/ui/sections/home/testimonial-section";
-import {OurServicesProps, OurServicesSection} from "../components/ui/sections/home/our-services-section";
+import {HeroProps, HeroSection} from '../components/ui/containers/page-sections/home/hero-section';
+import {OurProcessProps, OurProcessSection} from '../components/ui/containers/page-sections/home/our-process-section';
+import {StatisticsProps, StatisticsSection} from '../components/ui/containers/page-sections/home/statistics-section';
+import {WhyChooseUsProps, WhyChooseUsSection} from '../components/ui/containers/page-sections/home/why-choose-us-section';
+import {TestimonialProps, TestimonialSection} from "../components/ui/containers/page-sections/home/testimonial-section";
+import {OurServicesProps, OurServicesSection} from "../components/ui/containers/page-sections/home/our-services-section";
 import {BACKGROUND_DEFAULT} from "../config/app-config";
-import {HomeConfig} from "../config/home-config";
+import {HomeConfig} from "../config/home/home-config";
 import {BaseFlexContainer} from "../components/_utility/utility";
 
 const GlobalStyle = createGlobalStyle`
