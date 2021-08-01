@@ -1,10 +1,10 @@
-import {EXAMPLE_PATH} from '../../../lib/constants'
-import styled, {createGlobalStyle} from "styled-components";
-import {LogoComponent} from "../../company/logo.component";
-import {GithubIcon} from "../icons/github-icon.component";
-import {FacebookIcon} from "../icons/facebook-icon.component";
-import {PhoneNumberIcon} from "../icons/phone-number-icon.component";
-import {CompanyPhoneNumber} from "../../company/company-phone-number.component";
+import { EXAMPLE_PATH } from "../../../lib/constants";
+import styled, { createGlobalStyle } from "styled-components";
+import { LogoComponent } from "../../company/logo.component";
+import { GithubIcon } from "../icons/github-icon.component";
+import { FacebookIcon } from "../icons/facebook-icon.component";
+import { PhoneNumberIcon } from "../icons/phone-number-icon.component";
+import { CompanyPhoneNumber } from "../../company/company-phone-number.component";
 import React from "react";
 
 const Container = styled.div`
@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-grow: 1;
   min-height: 3rem;
   background: #f5f5f5;
-`
+`;
 const GlobalStyle = createGlobalStyle`
   footer {
     background: #f5f5f5;
@@ -28,27 +28,29 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-
 type Props = {
   phoneNumber: string;
-}
+};
 const Footer = ({}) => {
   return (
     <footer>
-        {/*<LogoComponent/>*/}
-        <FacebookIcon/>
-        <GithubIcon/>
-        <PhoneNumberIcon/>
-        <CompanyPhoneNumber/>
+      {/*<LogoComponent/>*/}
+      {/* <FacebookIcon />
+      <GithubIcon />
+      <PhoneNumberIcon />
+      <CompanyPhoneNumber />
 
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-          <a href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-             className="mx-3 font-bold hover:underline"
-          >View on GitHub</a>
-        </div>
-      <GlobalStyle/>
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+        <a
+          href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+          className="mx-3 font-bold hover:underline"
+        >
+          View on GitHub
+        </a>
+      </div>
+      <GlobalStyle /> */}
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
