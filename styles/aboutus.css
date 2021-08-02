@@ -1,29 +1,40 @@
-.aboutus__curved_line__one {
+.aboutus_curve {
   position: absolute;
-  top: -300px;
-  right: 240px;
-  transform: rotate(270deg);
-}
-.aboutus__curved_line__verticle {
-  position: absolute;
+  z-index: -1;
   top: -30px;
-  right: 393px;
+  left: -230px;
+  width: 1200px;
+  height: 1400px;
 }
-.aboutus__curved_line__horizontal {
+.aboutus_leadership {
   position: absolute;
-  top: 416px;
-  right: 549px;
+  color: #fff;
+  font-size: 32px;
+  top: -45px;
+  right: 681px;
+  line-height: 37px;
 }
-.aboutus__curved_line__verticle_final {
+.aboutus-ceo {
   position: absolute;
-  top: 448px;
-  left: 299px;
+  top: 680px;
+  left: 400px;
 }
-
+.aboutus-ceo__name {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #c6c6c6;
+}
+.aboutus-ceo__text {
+  color: #c6c6c6;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: right;
+}
 .aboutus__curved_profile_back {
   position: absolute;
-  top: 518px;
-  left: 130px;
+  top: 458px;
+  left: -210px;
 }
 
 .aboutus__curved_profile {
@@ -31,17 +42,9 @@
   top: 75px;
   left: 122px;
 }
-
-.aboutus__curved_line__verticle_1 {
-  position: absolute;
-  top: 250px;
-  right: 541px;
-  transform: rotate(0deg);
-}
-
 .left-card__container {
   position: relative;
-  top: -250px;
+  top: -310px;
   left: -10px;
 }
 .left-card {
@@ -49,7 +52,8 @@
   background: #222a36 !important;
   padding: 10px 40px;
   overflow: visible !important;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  border-radius: 12px !important;
 }
 
 .left-card__content {
@@ -84,35 +88,26 @@
 .timeline__title {
   position: relative;
   text-align: left !important;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #c6c6c6;
 }
 .timeline__para {
-  /* position: relative; */
   top: 30px;
-  /* left: 20px; */
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left !important;
+  color: #c6c6c6 !important;
 }
-.aboutus_curve__round_1 {
-  position: absolute;
-  right: 600px;
-  top: -40px;
-  z-index: 1;
-}
-.aboutus_curve__round_2 {
-  position: absolute;
-  left: 310px;
-  top: 430px;
-  z-index: 1;
-}
+
 .aboutus_leadership .bold {
   font-weight: bold;
 }
-.aboutus_leadership {
-  position: absolute;
-  color: #fff;
-  font-size: 32px;
-  top: -85px;
-  right: 631px;
-  line-height: 37px;
-}
+
 .aboutus__mobile_curve_1 {
   display: none;
 }
@@ -126,13 +121,49 @@
   display: none;
 }
 
+@media screen and (max-width: 1920px) {
+  .aboutus_curve {
+    left: -230px;
+  }
+}
+/* @media screen and (max-width: 1824px) {
+  .aboutus_curve {
+    left: -230px;
+  }
+} */
+
+@media only screen and (max-width: 1366px) {
+  .aboutus_curve {
+    left: -230px;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
+  .left-card__container {
+    left: 30px;
+  }
+  .aboutus_curve {
+    left: -250px;
+  }
+}
+
 @media screen and (max-width: 780px) {
-  .aboutus__curved_line__horizontal,
-  .aboutus__curved_line__one,
-  .aboutus__curved_line__verticle_1,
-  .aboutus__curved_line__verticle,
-  .aboutus__curved_line__verticle_final {
+  .aboutus-ceo {
     display: none;
+  }
+  .aboutus_curve {
+    left: 16px;
+    top: -390px;
+    width: unset;
+    height: unset;
+  }
+  .aboutus_curve img {
+    height: 1000px;
+    width: 200px;
+  }
+  .aboutus_leadership {
+    top: 211px;
+    left: 100%;
   }
 
   .left-card__container {
@@ -140,43 +171,22 @@
     top: -300px;
     left: 0px;
   }
-  .aboutus_curve__round_1 {
-    right: 149px;
-    top: 228px;
-    z-index: 1;
-  }
-  .aboutus__mobile_curve_1 img {
-    width: 530px;
-  }
-  .aboutus__mobile_curve_1 {
-    overflow-x: hidden;
-    display: block;
-    position: absolute;
-    top: 255px;
-    left: 53px;
-    z-index: -9;
-  }
+
   .aboutus__curved_profile_back {
-    position: absolute;
-    top: 320px;
-    left: 250px;
+    top: 64px;
+    left: 80px;
   }
   .aboutus__curved_profile_back img {
-    height: 200px;
-    width: 200px;
-  }
-  .aboutus__curved_profile {
-    position: absolute;
-    top: 50px;
-    left: 65px;
+    width: 120px;
+    height: 120px;
   }
   .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
+    width: 80px;
+    height: 80px;
   }
-  .aboutus_leadership {
-    top: 510px;
-    left: 40%;
+  .aboutus__curved_profile {
+    top: 26px;
+    left: 34px;
   }
   .timeline__title {
     position: absolute;
@@ -187,6 +197,7 @@
     padding-top: 60px !important;
   }
   .aboutus_curve__round_2 {
+    display: block;
     left: 45px;
     top: 1690px;
     z-index: 1;
@@ -224,401 +235,213 @@
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .aboutus_curve {
+    left: 16px;
+    top: -390px;
+    width: unset;
+    height: unset;
+  }
+  .aboutus_curve img {
+    height: 1000px;
+    width: 200px;
+  }
+  .aboutus_leadership {
+    top: 211px;
+    left: 100%;
+  }
+  .aboutus__curved_profile_back img {
+    width: 120px;
+    height: 120px;
+  }
+  .aboutus__curved_profile img {
+    width: 80px;
+    height: 80px;
+  }
+  .aboutus__curved_profile {
+    top: 26px;
+    left: 34px;
+  }
   .left-card__container {
     position: relative;
     top: -300px;
     left: 0px;
   }
-  .aboutus_curve__round_1 {
-    right: 311px;
-    top: 240px;
-  }
-  .aboutus__mobile_curve_1 img {
-    width: 530px;
-    height: 1800px;
-  }
-  .aboutus__mobile_curve_1 {
-    top: 255px;
-    left: -10px;
-    z-index: -9;
-  }
+
   .aboutus__curved_profile_back {
-    position: absolute;
-    top: 280px;
-    left: 290px;
-  }
-  .aboutus__curved_profile_back img {
-    height: 200px;
-    width: 200px;
-  }
-  .aboutus__curved_profile {
-    position: absolute;
-    top: 50px;
-    left: 65px;
-  }
-  .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
-  }
-  .aboutus_leadership {
-    top: 475px;
-    left: 40%;
-  }
-  .timeline__title {
-    position: absolute;
-    left: 40px;
-    top: 5px;
-  }
-  .timeline__para {
-    padding-top: 60px !important;
-  }
-  .aboutus_curve__round_2 {
-    left: 54px;
-    top: 1230px;
-  }
-
-  .left-card__icon {
-    position: absolute;
-    display: inline-block;
-    left: 40px;
-    top: 26%;
-    transform: translateY(-50%);
-  }
-
-  .left-card__icon img {
-    height: 50px;
-    width: 50px;
+    top: 64px;
+    left: 80px;
   }
 }
 
 /* iPhone 6+, 7+, 8+ ----------- */
-@media only screen and (max-device-width: 414px) {
+@media only screen and (max-width: 414px) {
   .left-card__container {
-    position: relative;
-    top: -300px;
-    left: 0px;
+    top: -344px;
   }
-  .left-card__icon {
-    top: 20%;
+  .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+    padding: 0px !important;
   }
-  .aboutus_curve__round_1 {
-    right: 105px;
-    top: 389px;
+  .aboutus_curve {
+    left: 16px;
+    top: -389px;
+    width: unset;
+    height: unset;
   }
-  .aboutus__mobile_curve_1 img {
-    width: 250px;
-    height: 1150px;
+  .aboutus_curve img {
+    height: 1400px;
+    width: 300px;
   }
-  .aboutus__mobile_curve_1 {
-    top: 410px;
-    left: 53px;
-    z-index: -9;
-  }
-  .aboutus__curved_profile_back {
-    top: 405px;
-    left: 70px;
+  .aboutus_leadership {
+    top: 250px;
+    left: 30%;
   }
   .aboutus__curved_profile_back img {
-    height: 200px;
-    width: 200px;
-  }
-  .aboutus__curved_profile {
-    top: 50px;
-    left: 65px;
+    width: 220px;
+    height: 220px;
   }
   .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
-  }
-  .aboutus_leadership {
-    top: 610px;
-    left: 32%;
-  }
-  .timeline__title {
-    position: absolute;
-    left: 40px;
-    top: 5px;
-  }
-  .timeline__para {
-    padding-top: 60px !important;
-  }
-  .aboutus_curve__round_2 {
-    left: 45px;
-    top: 1654px;
-  }
-}
-
-@media only screen and (max-device-width: 375px) {
-  .left-card__icon {
-    top: 20%;
-  }
-  .aboutus_curve__round_1 {
-    right: 64px;
-    top: 412px;
-  }
-  .aboutus__mobile_curve_1 {
-    top: 431px;
-  }
-  .aboutus__curved_profile_back {
-    top: 424px;
-    left: 70px;
+    width: 130px;
+    height: 130px;
   }
   .aboutus__curved_profile {
-    top: 50px;
-    left: 65px;
+    top: 54px;
+    left: 82px;
   }
-  .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
-  }
-  .aboutus_leadership {
-    top: 640px;
-  }
-  .timeline__title {
-    position: absolute;
-    left: 40px;
-    top: 5px;
-  }
-  .timeline__para {
-    padding-top: 60px !important;
-  }
-  .aboutus_curve__round_2 {
-    left: 45px;
-    top: 1721px;
-  }
-
-  /* Styles */
-}
-
-@media only screen and (max-device-width: 360px) {
   .left-card__container {
-    position: relative;
-    top: -300px;
+    top: -316px;
     left: 0px;
   }
-  .left-card__icon {
-    top: 18%;
-  }
-  .aboutus_curve__round_1 {
-    right: 48px;
-    top: 457px;
-  }
-  .aboutus__mobile_curve_1 img {
-    width: 250px;
-    height: 1150px;
-  }
-  .aboutus__mobile_curve_1 {
-    top: 480px;
-    left: 53px;
-    z-index: -9;
-  }
-  .aboutus__curved_profile_back {
-    top: 465px;
-    left: 70px;
-  }
-  .aboutus__curved_profile {
-    top: 50px;
-    left: 65px;
-  }
-  .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
-  }
-  .aboutus_leadership {
-    top: 670px;
-  }
-  .timeline__title {
-    position: absolute;
-    left: 40px;
-    top: 5px;
-  }
-  .timeline__para {
-    padding-top: 60px !important;
-  }
-  .aboutus_curve__round_2 {
-    left: 45px;
-    top: 1865px;
-  }
-  /* Styles */
-}
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-device-width: 320px) {
-  .left-card__container {
-    position: relative;
-    top: -300px;
-    left: 0px;
-  }
-  .left-card__icon {
-    top: 18%;
-  }
-  .aboutus_curve__round_1 {
-    right: 38px;
-    top: 550px;
-  }
-  .aboutus__mobile_curve_1 img {
-    width: 222px;
-    height: 1150px;
-  }
-  .aboutus__mobile_curve_1 {
-    top: 511px;
-    left: 53px;
-    z-index: -9;
-  }
   .aboutus__curved_profile_back {
-    top: 545px;
-    left: 50px;
-  }
-  .aboutus__curved_profile {
-    top: 50px;
-    left: 65px;
-  }
-  .aboutus__curved_profile img {
-    height: 120px;
-    width: 120px;
-  }
-  .aboutus_leadership {
-    top: 764px;
+    top: 39px;
+    left: 11px;
   }
   .timeline__title {
-    position: absolute;
-    left: 40px;
-    top: 5px;
+    font-size: 22px;
+    line-height: 26px;
   }
   .timeline__para {
-    padding-top: 60px !important;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 23px;
   }
-  .aboutus_curve__round_2 {
-    left: 45px;
-    top: 2196px;
+  .aboutus__last-text {
+    font-size: 24px;
+    line-height: 35px;
   }
 }
 
-@media only screen and (max-width: 1224px) and (min-height: 1366px) {
-  .left-card__container {
-    left: 30px;
+@media only screen and (max-width: 375px) {
+  .aboutus_curve {
+    left: 16px;
+    top: -389px;
+    width: unset;
+    height: unset;
+  }
+  .aboutus_curve img {
+    height: 1400px;
+    width: 300px;
+  }
+  .aboutus_leadership {
+    top: 250px;
+    left: 30%;
   }
   .aboutus__curved_profile_back img {
-    /* width: 200px; */
+    width: 220px;
+    height: 220px;
   }
+  .aboutus__curved_profile img {
+    width: 130px;
+    height: 130px;
+  }
+  .aboutus__curved_profile {
+    top: 54px;
+    left: 82px;
+  }
+
   .aboutus__curved_profile_back {
-    top: 640px;
-    left: -27px;
-  }
-  .aboutus_curve__round_1 {
-    right: 393px;
-    top: -29px;
-  }
-  .aboutus_curve__round_2 {
-    left: 200px;
-    top: 508px;
-  }
-  .aboutus__curved_line__verticle_final {
-    top: 525px;
-    left: 188px;
-  }
-  .aboutus__curved_line__horizontal {
-    top: 605px;
-    right: 343px;
-  }
-  .aboutus__curved_line__verticle {
-    top: -20px;
-    right: 187px;
-  }
-  .aboutus_leadership {
-    top: -70px;
-    left: 420px;
+    top: 39px;
+    left: 11px;
   }
 }
 
-/* Desktops and laptops ----------- */
-@media only screen and (max-width: 1224px) {
+@media only screen and (max-width: 360px) {
+  .aboutus_curve {
+    left: 16px;
+    top: -370px;
+  }
+  .aboutus_curve img {
+    height: 1400px;
+    width: 300px;
+  }
+  .aboutus_leadership {
+    top: 250px;
+    left: 30%;
+  }
+  .aboutus__curved_profile_back img {
+    width: 220px;
+    height: 220px;
+  }
+  .aboutus__curved_profile img {
+    width: 130px;
+    height: 130px;
+  }
+  .aboutus__curved_profile {
+    top: 54px;
+    left: 82px;
+  }
   .left-card__container {
-    left: 30px;
-  }
-  .aboutus__curved_line__verticle {
-    right: 255px;
-  }
-  .aboutus_curve__round_1 {
-    right: 464px;
-  }
-  .aboutus__curved_line__horizontal {
-    right: 411.3px;
-  }
-  .aboutus__curved_profile_back {
+    position: relative;
+    top: -300px;
     left: 0px;
   }
-  .aboutus__curved_line__verticle_final {
-    top: 454px;
-    left: 210px;
-  }
-  .aboutus_curve__round_2 {
-    left: 221px;
-    top: 439px;
-  }
-  .aboutus_leadership {
-    right: 490px;
+
+  .aboutus__curved_profile_back {
+    top: 39px;
+    left: 11px;
   }
 }
 
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
+@media only screen and (max-width: 320px) {
+  .MuiTimeline-root {
+    padding: 0 !important;
+  }
+  .aboutus_curve {
+    left: 0px;
+    top: -320px;
+  }
+  .aboutus_curve img {
+    height: 1200px;
+    width: 300px;
+  }
+  .aboutus_leadership {
+    top: 200px;
+    left: 20%;
+  }
+  .aboutus__curved_profile_back img {
+    width: 220px;
+    height: 220px;
+  }
+  .aboutus__curved_profile img {
+    width: 130px;
+    height: 130px;
+  }
+  .aboutus__curved_profile {
+    top: 54px;
+    left: 82px;
+  }
   .left-card__container {
-    left: -60px;
+    position: relative;
+    top: -285px;
+    left: 0px;
   }
-  .aboutus__curved_line__verticle {
-    right: 545px;
-  }
-  .aboutus_curve__round_1 {
-    right: 753px;
-  }
-  .aboutus__curved_line__horizontal {
-    right: 702px;
-  }
-  .aboutus__curved_profile_back {
-    left: 270px;
-  }
-  .aboutus__curved_line__verticle_final {
-    top: 454px;
-    left: 410px;
-  }
-  .aboutus_curve__round_2 {
-    left: 421px;
-    top: 437px;
-  }
-  .aboutus_leadership {
-    right: 790px;
-  }
-}
 
-@media screen and (min-width: 1920px) {
-  .aboutus_leadership {
-    right: 831px;
-  }
-  .aboutus_curve__round_1 {
-    right: 800px;
-    top: -40px;
-  }
-  .aboutus_curve__round_2 {
-    left: 501px;
-    top: 439px;
-  }
-  .aboutus__curved_line__verticle {
-    top: -29px;
-    right: 585px;
-  }
-  .aboutus__curved_line__horizontal {
-    top: 416px;
-    right: 741px;
-  }
-  .aboutus__curved_line__verticle_final {
-    top: 455px;
-    left: 490px;
-  }
   .aboutus__curved_profile_back {
-    top: 518px;
-    left: 320px;
+    top: 0px;
+    left: 11px;
+  }
+  .timeline__title {
+    margin-top: -10px;
   }
 }
