@@ -18,6 +18,7 @@ position:relative;
 `;
 const CardChild = styled.div`
   height: 180px;
+  width:100%;
   color: #fff !important;
   vertical-align: middle;
   background: #222a36;
@@ -52,8 +53,8 @@ export default function SpecializeSection({}) {
           </div>
         </HeadText>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={10} sm={5} md={4}>
-            <Card style={{ background: "#222a36", borderRadius: 12 }}>
+          <Grid item xs={10} sm={6} md={4}>
+            <Card style={{ background: "#222a36", borderRadius: 12,}}>
               <CardChild>
                 <Box my="auto">
                   <img src="/assets/icons/Web App Browser.svg" alt="" />

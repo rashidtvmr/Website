@@ -23,6 +23,7 @@ const HeaderContainer = styled.div`
   width: 100%;
   top: 0;
   height: 5rem;
+  overflow-x:scroll;
 `;
 
 const NavContainer = styled.nav`

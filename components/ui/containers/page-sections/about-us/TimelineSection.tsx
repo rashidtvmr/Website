@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 });
 function TimelineSection() {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const classes = useStyles();
   return (
@@ -69,7 +69,7 @@ function TimelineSection() {
 
           <div>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={4} style={{ position: "relative" }}>
+              <Grid item xs={12} lg={4} style={{ position: "relative" }}>
                 <div className="left-card__container">
                   <Card className="left-card">
                     <div className="left-card__content">
@@ -116,7 +116,7 @@ function TimelineSection() {
                   </Card>
                 </div>
               </Grid>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} lg={8}>
                 <Timeline align={isSmallScreen ? "left" : "right"}>
                   <TimelineItem style={{ marginTop: 20 }}>
                     <TimelineOppositeContent className="timeline__title">

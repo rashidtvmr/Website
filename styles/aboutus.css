@@ -147,13 +147,100 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .aboutus-ceo {
+    display: none;
+  }
+  .aboutus_curve {
+    left: 16px;
+    top: -410px;
+    width: unset;
+    height: unset;
+  }
+  .aboutus_curve img {
+    height: 1000px;
+    width: 200px;
+  }
+  .aboutus_leadership {
+    top: 211px;
+    left: 100%;
+  }
+
+  .left-card__container {
+    position: relative;
+    top: -300px;
+    left: 0px;
+  }
+
+  .aboutus__curved_profile_back {
+    top: 64px;
+    left: 80px;
+  }
+  .aboutus__curved_profile_back img {
+    width: 120px;
+    height: 120px;
+  }
+  .aboutus__curved_profile img {
+    width: 80px;
+    height: 80px;
+  }
+  .aboutus__curved_profile {
+    top: 26px;
+    left: 34px;
+  }
+  .timeline__title {
+    position: absolute;
+    left: 40px;
+    top: 5px;
+  }
+  .timeline__para {
+    padding-top: 60px !important;
+  }
+  .aboutus_curve__round_2 {
+    display: block;
+    left: 45px;
+    top: 1690px;
+    z-index: 1;
+  }
+
+  .left-card__heading {
+    margin-left: 50px;
+    /* transform: translateY(-50%); */
+  }
+  .left-card__icon {
+    position: absolute;
+    display: inline-block;
+    left: 40px;
+    top: 20%;
+    /* transform: translateY(-50%); */
+  }
+
+  .left-card__icon img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .aboutus__spl__heading {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: left;
+  }
+  .aboutus__spl__heading__lb {
+    display: block;
+  }
+  .aboutus__last-text {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .aboutus-ceo {
     display: none;
   }
   .aboutus_curve {
     left: 16px;
-    top: -390px;
+    top: -410px;
     width: unset;
     height: unset;
   }
@@ -238,7 +325,7 @@
 @media only screen and (max-width: 768px) {
   .aboutus_curve {
     left: 16px;
-    top: -390px;
+    top: -410px;
     width: unset;
     height: unset;
   }
@@ -275,7 +362,7 @@
 }
 
 /* iPhone 6+, 7+, 8+ ----------- */
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 415px) {
   .left-card__container {
     top: -344px;
   }
@@ -283,13 +370,13 @@
     padding: 0px !important;
   }
   .aboutus_curve {
-    left: 16px;
-    top: -389px;
+    left: 3px;
+    top: -359px;
     width: unset;
     height: unset;
   }
   .aboutus_curve img {
-    height: 1400px;
+    height: 1233px;
     width: 300px;
   }
   .aboutus_leadership {
@@ -318,11 +405,11 @@
     left: 11px;
   }
   .timeline__title {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 26px;
   }
   .timeline__para {
-    margin-top: 20px;
+    margin-top: 24px;
     font-size: 16px;
     line-height: 23px;
   }
